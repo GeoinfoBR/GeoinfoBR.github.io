@@ -1,0 +1,7 @@
+20070  git clone git@github.com:GeoinfoBR/GeoinfoBR.github.io.git 
+20092  git remote set-url origin git@github.com:GeoinfoBR/GeoinfoBR.github.io.git
+20072  cd GeoinfoBR.github.io
+Edit
+20079  git add .
+20081  git commit -m "Programa atualizado"
+20095  git push origin main
