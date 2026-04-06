@@ -206,6 +206,136 @@
             border-radius: 4px;
         }
 
+        /* --- WORKSHOP ALERT BUTTON --- */
+        .workshop-alert {
+            background: linear-gradient(135deg, #d4f1e9 0%, #b8e0d4 100%);
+            border-radius: 12px;
+            margin-bottom: 25px;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease;
+        }
+
+        .workshop-alert:hover {
+            transform: translateY(-2px);
+        }
+
+        .workshop-alert-content {
+            padding: 18px 25px;
+            text-align: center;
+        }
+
+        .workshop-alert .alert-badge {
+            background-color: #2c7a5e;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .workshop-alert h4 {
+            color: #1a5d4c;
+            font-size: 22px;
+            margin: 0 0 8px 0;
+            font-weight: 700;
+        }
+
+        .workshop-alert .dates {
+            color: #2c7a5e;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .workshop-alert .submit-btn {
+            display: inline-block;
+            background-color: #2c7a5e;
+            color: white;
+            padding: 12px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .workshop-alert .submit-btn:hover {
+            background-color: #1a5d4c;
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+/* --- REGISTRATION ALERT BUTTON --- */
+.registration-alert {
+    background: linear-gradient(135deg, #d4e8fc 0%, #c8ebfe 100%);
+    border-radius: 12px;
+    margin-bottom: 25px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.registration-alert:hover {
+    transform: translateY(-2px);
+}
+
+.registration-alert-content {
+    padding: 18px 25px;
+    text-align: center;
+}
+
+.registration-alert .alert-badge {
+    background-color: #5a9bc0;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.registration-alert h4 {
+    color: #003366;
+    font-size: 22px;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+}
+
+.registration-alert .dates {
+    color: #2c6e9e;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.registration-alert .register-btn {
+    display: inline-block;
+    background-color: #5a9bc0;
+    color: white;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.registration-alert .register-btn:hover {
+    background-color: #3a7ca0;
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
         /* --- FOOTER --- */
         footer {
             background-color: #003366;
@@ -267,6 +397,15 @@
             .home-overlay {
                 display: none;
             }
+
+            .workshop-alert h4 {
+                font-size: 18px;
+            }
+
+            .workshop-alert .submit-btn {
+                padding: 8px 20px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -307,16 +446,32 @@
     </div>
 
     <div class="container">
-        <!-- <div style="text-align: center; margin-bottom: 30px;">
-            <span style="background: #ffecb3; padding: 5px 10px; border-radius: 4px; font-weight: bold;">New: Photos of
-                the event!</span>
+
+        <!-- WORKSHOP SUBMISSION ALERT - DESTAQUE ADICIONADO -->
+        <div class="workshop-alert">
+            <div class="workshop-alert-content">
+                <span class="alert-badge">🟢 OPEN FOR SUBMISSIONS 🟢</span>
+                <h4>📢 Workshop Submission is now open!</h4>
+                <div class="dates">📅 April 01 - June 30, 2026</div>
+                <a href="https://forms.gle/Lp9TGbUM6ypSMo8z7" class="submit-btn">➡️ SUBMIT YOUR WORKSHOP NOW ⬅️</a>
+            </div>
+        </div>
+
+        <!-- REGISTRATION ALERT - INSCRIÇÕES ABERTAS -->
+        <!-- <div class="registration-alert">
+            <div class="registration-alert-content">
+                <span class="alert-badge">📝 REGISTRATION OPEN 📝</span>
+                <h4>🎟️ Symposium Registration is now open!</h4>
+                <div class="dates">📅 Early Bird: Until October 15, 2026 | Regular: October 16 - December 05, 2026</div>
+                <a href="#" class="register-btn">➡️ REGISTER NOW ⬅️</a>
+            </div>
         </div> -->
 
         <div class="box">
             <h3>Important Dates</h3>
             <p><strong>GEOINFO 2026 will be held presentially.</strong></p>
             <ul>
-                <li><strong>Workshop Submission start:</strong> 2026/April/01 - 2026/June/30</li>
+                <li><strong>Workshop Submission:</strong> 2026/April/01 - 2026/June/30</li>
                 <li><strong>Workshop Community Interest:</strong> 2026/July/01 - 2026/July/10</li>
                 <li><strong>Announcement of Accepted Workshops:</strong> 2026/July/13</li>
                 <li><strong>Paper Submission:</strong> 2026/August/01 - 2026/October/18</li>
@@ -377,14 +532,12 @@
                 <img src="assets/circle-sbsr.png" alt="SBSR">
             </a>
 
-
             <a href="https://data.inpe.br/bdc/web/">
                 <img src="assets/circle-bdc.png" alt="Brazil Data Cube Project">
             </a>
 
             <a href="https://meninasdageo.com.br/">
-                <img src="assets/logo_meninaspeq.png"
-                    alt="Meniunas da Geo">
+                <img src="assets/logo_meninaspeq.png" alt="Meninas da Geo">
             </a>
         </div>
     </div>
