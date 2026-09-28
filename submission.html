@@ -5,28 +5,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEOINFO 2026 - Submission</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
     <style>
-        /* Shortened style block for brevity - Ensure styles match previous files */
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Roboto', sans-serif; background-color: #ffffff; color: #333; line-height: 1.6; }
-        header { background-color: #c8ebfe; padding: 10px 20px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
-        .logo img { height: 50px; }
-        .nav-links { display: flex; gap: 15px; }
-        .nav-links a { color: #003366; text-decoration: none; font-weight: 500; font-size: 14px; padding: 8px 12px; border-radius: 4px; transition: background 0.3s; }
-        .nav-links a:hover { background-color: rgba(255,255,255,0.5); }
-        .nav-links a.active { background-color: rgba(255,255,255,0.7); font-weight: 700; }
-        .container { max-width: 1100px; margin: 40px auto; padding: 0 20px; }
-        h2 { color: #003366; border-bottom: 2px solid #c8ebfe; padding-bottom: 10px; margin-bottom: 20px; }
         h3 { color: #0056b3; margin: 20px 0 10px; }
         .box { background-color: #f9f9f9; padding: 20px; border-left: 4px solid #0056b3; margin: 20px 0; }
-        .hamburger { display: none; cursor: pointer; font-size: 24px; color: #003366; }
-        @media (max-width: 900px) {
-            .hamburger { display: block; }
-            .nav-links { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; width: 100%; background-color: #c8ebfe; padding: 20px; box-shadow: 0 5px 5px rgba(0,0,0,0.1); }
-            .nav-links.active { display: flex; }
+        /* --- PUBLISHING PARTNERS --- */
+        .publishing-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 30px;
+            margin-bottom: 30px;
         }
-        footer { background-color: #003366; color: white; text-align: center; padding: 20px; margin-top: 50px; }
+
+        .publishing-logos img {
+            width: 140px;
+            height: 100px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .publishing-logos img:hover {
+            transform: scale(1.05);
+        }
+        /* --- SUBMISSION ALERT --- */
+        .submission-alert {
+            background: linear-gradient(135deg, #dfe4f7 0%, #c7d6ef 100%);
+            border-radius: 12px;
+            margin: 25px 0;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease;
+        }
+
+        .submission-alert:hover {
+            transform: translateY(-2px);
+        }
+
+        .submission-alert-content {
+            padding: 20px 25px;
+            text-align: center;
+        }
+
+        .submission-alert .alert-badge {
+            display: inline-block;
+            background-color: #081558;
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .submission-alert h4 {
+            color: #081558;
+            font-size: 22px;
+            margin: 10px 0;
+            font-weight: 700;
+        }
+
+        .submission-alert .dates {
+            color: #081558;
+            font-size: 16px;
+            margin-bottom: 18px;
+        }
+
+        .submission-btn {
+            display: inline-block;
+            background-color: #081558;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 40px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .submission-btn:hover {
+            background-color: #24208a;
+            color: #fff;
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
     </style>
 </head>
 <body>
@@ -64,6 +131,23 @@
 
         <p>Contributions must be submitted in PDF format, made in accordance with the <strong>SBC</strong> guidelines. Templates and instructions for preparing manuscripts on OpenOffice, MS-Word, or LaTeX can be found at: <a href="https://www.sbc.org.br/documentos-da-sbc/summary/169-templates-para-artigos-e-capitulos-de-livros/878-modelosparapublicaodeartigos" target="_blank">Templates available here</a>.</p>
 
+        <!-- SUBMISSION ALERT - INSCRIÇÕES ABERTAS -->
+        <div class="submission-alert">
+            <div class="submission-alert-content">
+                <span class="alert-badge">📄 PAPER SUBMISSION OPEN 📄</span>
+                <h4>Submit your paper to GEOINFO 2026!</h4>
+                <div class="dates">
+                    📝 The submission system is now open. Submit your manuscript before <strong>October 18, 2026</strong>.
+                </div>
+                <a href="https://cmt3.research.microsoft.com/GEOINFO2026/Submission/Index"
+                class="submission-btn"
+                target="_blank"
+                rel="noopener noreferrer">
+                    SUBMIT NOW
+                </a>
+            </div>
+        </div>
+
         <h2>Submission Instructions</h2>
         <p>The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.</p>
         
@@ -75,6 +159,35 @@
             <li>Select your role as "Author", and the conference "GEOINFO2026".</li>
             <li>Click on "+ Create new submission" under the "Author Console".</li>
         </ol>
+
+
+        <h2>Selected Papers</h2>
+
+        <p>The authors of the awarded contribution will be invited to submit an extended version of their work to
+            <a href="https://seer.ufu.br/index.php/revistabrasileiracartografia" target="_blank" rel="noopener noreferrer">RBC</a>,
+            or
+        <a href="https://www.sciencedirect.com/journal/geomatica" target="_blank" rel="noopener noreferrer">Geomatica</a>.
+    
+    The invited manuscript will be subject to the journal's standard editorial and peer-review process.
+    Authors whose papers are recommended for submission may benefit from special Article Processing Charge conditions.
+</p>
+
+        <h3>Publishing Partners</h3>
+        <div class="publishing-logos">
+
+            <a href="https://www.sciencedirect.com/journal/geomatica"
+            target="_blank"
+            rel="noopener noreferrer">
+                <img src="assets/publishing_partners/geomatica_cover.png" alt="Geomatica">
+            </a>
+
+            <a href="https://seer.ufu.br/index.php/revistabrasileiracartografia"
+            target="_blank"
+            rel="noopener noreferrer">
+                <img src="assets/publishing_partners/rbc_cover.png" alt="Revista Brasileira de Cartografia">
+            </a>
+
+        </div>
     </div>
 
     <footer>&copy; 2026 GEOINFO</footer>
