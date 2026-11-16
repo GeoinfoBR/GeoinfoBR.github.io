@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEOINFO 2026 - Local</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <style>
+        .map-responsive { overflow:hidden; padding-bottom:56.25%; position:relative; height:0; }
+        .map-responsive iframe { left:0; top:0; height:100%; width:100%; position:absolute; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="../logo.png" alt="GEOINFO Logo"></a></div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Início</a>
+                <a href="call_for_papers.html">Chamada de Trabalhos</a>
+                <a href="submission.html">Submissão</a>
+                <a href="registration.html">Inscrição</a>
+                <a href="program.html">Programação</a>
+                <a href="venue.html" class="active">Local</a>
+                <a href="organization.html">Organização</a>
+                <a href="committee.html">Comitê</a>
+                <a href="collection.html">Acervo</a>
+            </nav>
+            <a href="../venue.html" class="lang-switch" hreflang="en" title="View in English">EN</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Local</h2>
+        <p>O GEOINFO 2026 será realizado presencialmente no <strong>Instituto Nacional de Pesquisas Espaciais (INPE)</strong>, em São José dos Campos, SP.</p>
+        <p><strong>Auditório:</strong> Auditório Sérgio Sobral</p>
+
+        <br>
+        <h2>Endereço</h2>
+        <p>Instituto Nacional de Pesquisas Espaciais (INPE)<br>
+        Av. dos Astronautas, 1758<br>
+        São José dos Campos, SP - Brasil</p>
+
+        <div class="map-responsive" style="margin-top: 20px;">
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.497554556447!2d-45.86178168443152!3d-23.213589984856983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cc4a9e8e5033c7%3A0x8673070404091910!2sInstituto%20Nacional%20de%20Pesquisas%20Espaciais%20(INPE)!5e0!3m2!1spt-BR!2sbr!4v1643900000000!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </div>
+
+    <footer>&copy; 2026 GEOINFO</footer>
+    <script>function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }</script>
+</body>
+</html>

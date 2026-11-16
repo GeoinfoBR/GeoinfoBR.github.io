@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEOINFO 2026 - Inscrição</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <style>
+        .pricing-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .pricing-table th, .pricing-table td { border: 1px solid #ddd; padding: 15px; text-align: left; }
+        .pricing-table th { background-color: #f0f8ff; color: #003366; }
+        .btn-register { display: inline-block; background-color: #0056b3; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; margin-top: 20px; }
+        .btn-register:hover { background-color: #003366; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="../logo.png" alt="GEOINFO Logo"></a></div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Início</a>
+                <a href="call_for_papers.html">Chamada de Trabalhos</a>
+                <a href="submission.html">Submissão</a>
+                <a href="registration.html" class="active">Inscrição</a>
+                <a href="program.html">Programação</a>
+                <a href="venue.html">Local</a>
+                <a href="organization.html">Organização</a>
+                <a href="committee.html">Comitê</a>
+                <a href="collection.html">Acervo</a>
+            </nav>
+            <a href="../registration.html" class="lang-switch" hreflang="en" title="View in English">EN</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Inscrição</h2>
+        <p>As inscrições para o GEOINFO 2026 estão abertas até 07 de dezembro de 2026.</p>
+
+        <table class="pricing-table">
+            <tr>
+                <th>Categoria</th>
+                <th>Valor (R$)</th>
+            </tr>
+            <tr>
+                <td>Estudante de graduação</td>
+                <td>R$ 120</td>
+            </tr>
+            <tr>
+                <td>Estudante de pós-graduação</td>
+                <td>R$ 170</td>
+            </tr>
+            <tr>
+                <td>Profissional</td>
+                <td>R$ 300</td>
+            </tr>
+        </table>
+
+        <p style="margin-top: 20px;">O pagamento pode ser feito por depósito, transferência bancária ou PIX; Nota de Empenho para instituições federais brasileiras; ou PayPal para participantes estrangeiros.</p>
+
+        <a href="https://selperbrasil.org.br/inscricao/geoinfo2026/" class="btn-register" target="_blank">Preencher Formulário de Inscrição</a>
+    </div>
+
+    <footer>&copy; 2026 GEOINFO</footer>
+    <script>function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }</script>
+</body>
+</html>

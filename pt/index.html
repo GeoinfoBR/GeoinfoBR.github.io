@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEOINFO 2026 - Início</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <style>
+        /* --- HOME PAGE OVERRIDES --- */
+        body {
+            background-color: #fafafa;
+        }
+
+        a {
+            text-decoration: none;
+            color: #0056b3;
+        }
+
+        ul {
+            list-style-position: inside;
+        }
+
+        /* --- HERO SECTION --- */
+        .hero-wrapper {
+            max-width: 1200px;
+            /* largura máxima */
+            margin: 30px auto;
+            /* centraliza e cria espaço lateral */
+            padding: 0 20px;
+            /* respiro em telas pequenas */
+        }
+
+        /* .hero {
+            position: relative;
+            height: 60vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        } */
+        .hero {
+            position: relative;
+            width: 100%;
+            background: #000;
+            /* fundo para quando sobrar espaço */
+        }
+
+        /* .hero img.hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            z-index: -1;
+        } */
+        .hero img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* .hero video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        } */
+
+        /* .home-overlay {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 40px;
+            border-radius: 8px;
+            z-index: 1;
+            text-align: left;
+        } */
+        .home-overlay {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(0, 0, 0, 0.55);
+            padding: 10px;
+            border-radius: 8px;
+            color: white;
+            text-align: right;
+        }
+
+        .hero h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            line-height: 1.1;
+            text-align: right;
+        }
+
+        h2 {
+            margin-top: 30px;
+        }
+
+        h3 {
+            color: #0056b3;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* --- CALLOUT BOX --- */
+        .box {
+            background-color: #f0f8ff;
+            border-left: 5px solid #0056b3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        /* --- WORKSHOP ALERT BUTTON --- */
+        .workshop-alert {
+            background: linear-gradient(135deg, #d4f1e9 0%, #b8e0d4 100%);
+            border-radius: 12px;
+            margin-bottom: 25px;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease;
+        }
+
+        .workshop-alert:hover {
+            transform: translateY(-2px);
+        }
+
+        .workshop-alert-content {
+            padding: 18px 25px;
+            text-align: center;
+        }
+
+        .workshop-alert .alert-badge {
+            background-color: #2c7a5e;
+            color: white;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+
+        .workshop-alert h4 {
+            color: #1a5d4c;
+            font-size: 22px;
+            margin: 0 0 8px 0;
+            font-weight: 700;
+        }
+
+        .workshop-alert .dates {
+            color: #2c7a5e;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+
+        .workshop-alert .submit-btn {
+            display: inline-block;
+            background-color: #2c7a5e;
+            color: white;
+            padding: 12px 28px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 40px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .workshop-alert .submit-btn:hover {
+            background-color: #1a5d4c;
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+/* --- REGISTRATION ALERT BUTTON --- */
+.registration-alert {
+    background: linear-gradient(135deg, #d4e8fc 0%, #c8ebfe 100%);
+    border-radius: 12px;
+    margin-bottom: 25px;
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.registration-alert:hover {
+    transform: translateY(-2px);
+}
+
+.registration-alert-content {
+    padding: 18px 25px;
+    text-align: center;
+}
+
+.registration-alert .alert-badge {
+    background-color: #5a9bc0;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.registration-alert h4 {
+    color: #003366;
+    font-size: 22px;
+    margin: 0 0 8px 0;
+    font-weight: 700;
+}
+
+.registration-alert .dates {
+    color: #2c6e9e;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.registration-alert .register-btn {
+    display: inline-block;
+    background-color: #5a9bc0;
+    color: white;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.registration-alert .register-btn:hover {
+    background-color: #3a7ca0;
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* --- SUBMISSION BUTTON --- */
+
+.submission-alert {
+    background: linear-gradient(135deg, #dfe4f7 0%, #c7d6ef 100%);
+    border-radius: 12px;
+    margin-bottom: 25px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+.submission-alert-content{
+    padding:18px 25px;
+    text-align:center;
+}
+
+.submission-alert .alert-badge{
+    background:#081558;
+    color:#fff;
+    padding:5px 15px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:bold;
+}
+
+.submission-alert h4{
+    color:#081558;
+    font-size:22px;
+    margin:10px 0;
+}
+
+.submission-alert .dates{
+    margin-bottom:18px;
+    color:#081558;
+}
+
+.submission-alert .deadline-extended{
+    display:inline-block;
+    background:#fff3cd;
+    color:#8a4b00;
+    border:2px solid #f0ad4e;
+    border-radius:8px;
+    padding:8px 16px;
+    margin-bottom:12px;
+    font-size:16px;
+}
+
+.submission-btn{
+    display:inline-block;
+    background:#081558;
+    color:#fff;
+    padding:12px 30px;
+    border-radius:40px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+/* --- PUBLISHING PARTNERS --- */
+.publishing-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.publishing-logos img {
+    width: 140px;
+    height: 100px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.publishing-logos img:hover {
+    transform: scale(1.05);
+}
+
+.submission-btn:hover{
+    background:#24208a;
+    transform:scale(1.03);
+}
+
+        .org-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .org-logos img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .org-logos img:hover {
+            transform: scale(1.05);
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 900px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .home-overlay {
+                display: none;
+            }
+
+            .workshop-alert h4 {
+                font-size: 18px;
+            }
+
+            .workshop-alert .submit-btn {
+                padding: 8px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="../logo.png" alt="GEOINFO Logo">
+                </a>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html" class="active">Início</a>
+                <a href="call_for_papers.html">Chamada de Trabalhos</a>
+                <a href="submission.html">Submissão</a>
+                <a href="registration.html">Inscrição</a>
+                <a href="program.html">Programação</a>
+                <a href="venue.html">Local</a>
+                <a href="organization.html">Organização</a>
+                <a href="committee.html">Comitê</a>
+                <a href="collection.html">Acervo</a>
+            </nav>
+            <a href="../index.html" class="lang-switch" hreflang="en" title="View in English">EN</a>
+        </div>
+    </header>
+
+    <div class="hero-wrapper">
+        <div class="hero">
+            <img src="../assets/banner_small.png" alt="" class="hero-bg">
+            <div class="home-overlay">
+                <h1>XXVI Simpósio Brasileiro de Geoinformática</h1>
+                <h1>GEOINFO 2026</h1>
+                <p>Ciência de Dados Espaciais e Aplicações</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <!-- WORKSHOP SUBMISSION ALERT - DESTAQUE ADICIONADO -->
+        <!-- <div class="workshop-alert">
+            <div class="workshop-alert-content">
+                <span class="alert-badge">🟢 OPEN FOR SUBMISSIONS 🟢</span>
+                <h4>📢 Workshop Submission is now open!</h4>
+                <div class="dates">📅 April 01 - June 30, 2026</div>
+                <a href="https://forms.gle/Lp9TGbUM6ypSMo8z7" class="submit-btn">➡️ SUBMIT YOUR WORKSHOP NOW ⬅️</a>
+            </div>
+        </div> -->
+
+        <!-- REGISTRATION ALERT - WORKSHOP VOTING
+        <div class="registration-alert">
+            <div class="registration-alert-content">
+                <span class="alert-badge">🗳️ WORKSHOP VOTING OPEN 🗳️</span>
+                <h4>Choose the workshop you would like to attend!</h4>
+                <div class="dates">
+                    📝 Please complete the workshop voting form to indicate your preferred workshop (until July 26).
+                </div>
+                <a href="https://forms.gle/VQMhN6WxTzCMyAuS9"
+                class="register-btn"
+                target="_blank"
+                rel="noopener noreferrer">
+                    VOTE NOW 
+                </a>
+            </div>
+        </div> -->
+
+        <!-- WORKSHOP SELECTION RESULTS -->
+        <!-- <div class="registration-alert">
+            <div class="registration-alert-content">
+                <span class="alert-badge">🎉 WORKSHOP SELECTION RESULTS 🎉</span>
+                <h4>The selected workshops for GEOINFO are:</h4>
+
+                <div class="dates" style="text-align: left; max-width: 700px; margin: 0 auto;">
+                    <ul style="margin: 10px 0; padding-left: 20px;">
+                        <li><strong>Desenvolvimento de plugins para QGIS</strong></li>
+                        <li><strong>Earth Observation Data Cubes and Time Series Analysis of Images</strong></li>
+                    </ul>
+                    <p>Thank you to everyone who participated in the workshop voting!</p>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- SUBMISSION ALERT - INSCRIÇÕES ABERTAS -->
+        <div class="submission-alert">
+            <div class="submission-alert-content">
+                <span class="alert-badge">📄 SUBMISSÃO DE ARTIGOS ABERTA 📄</span>
+                <h4>Submeta seu artigo ao GEOINFO 2026!</h4>
+                <div class="deadline-extended">
+                    ⚠️ <strong>PRAZO PRORROGADO!</strong> A submissão de artigos está aberta até <strong>25 de outubro de 2026</strong>.
+                </div>
+                <div class="dates">
+                    📝 O sistema de submissão está aberto. Envie seu manuscrito até <del>18 de outubro de 2026</del> <strong>25 de outubro de 2026</strong>.
+                </div>
+                <a href="https://cmt3.research.microsoft.com/GEOINFO2026/Submission/Index"
+                class="submission-btn"
+                target="_blank"
+                rel="noopener noreferrer">
+                    SUBMETER AGORA
+                </a>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Datas Importantes</h3>
+            <p><strong>O GEOINFO 2026 será realizado presencialmente.</strong></p>
+            <ul>
+                <li><strong>✅ Submissão de Minicursos:</strong> 01/04/2026 - 30/06/2026</li>
+                <li><strong>✅ Votação da Comunidade nos Minicursos:</strong> 15/07/2026 - 26/07/2026</li>
+                <li><strong>✅ Divulgação dos Minicursos Aceitos:</strong> 28/07/2026</li>
+                <li><strong>⏳ Submissão de Artigos:</strong> 13/07/2026 - <del>18/10/2026</del> <strong>25/10/2026 (prorrogado)</strong></li>
+                <li><strong>Notificação de aceite:</strong> 08/11/2026</li>
+                <!-- <li><strong>Camera-ready submission deadline:</strong> 2026/November/15</li> -->
+                <li><strong>Programação Completa:</strong> 18/11/2026</li>
+                <li><strong>Simpósio:</strong> 07/12/2026 - 09/12/2026</li>
+            </ul>
+        </div>
+
+        <h2>Sobre o Evento</h2>
+        <p>O GEOINFO é um evento consolidado e tradicional, realizado desde 1999, dedicado à pesquisa,
+            ao desenvolvimento e a aplicações inovadoras em ciência da informação geográfica e áreas afins.</p>
+
+        <p>A Geoinformática e a Ciência da Informação Geográfica avançam continuamente, impulsionadas pela crescente
+            necessidade de compreender eventos e fenômenos relacionados a lugares e ao tempo. Essa demanda motivou, ao
+            longo dos anos, avanços significativos na coleta, gestão, análise e apresentação de dados geoespaciais.</p>
+
+        <p>A partir de 2026, o GEOINFO busca adotar uma nova perspectiva sobre suas áreas de interesse, tendo a
+            <strong>Ciência de Dados Geoespaciais</strong> como paradigma unificador de pesquisa.
+        </p>
+
+        <p>O GEOINFO está entre as 10 principais conferências da área segundo a Comissão Especial de Geoinformática
+            da Sociedade Brasileira de Computação (SBC).</p>
+
+
+        <!-- <h2>Organization</h2>
+        <p>All questions about submissions should be emailed to: <a
+                href="mailto:geoinformatica.brasil@gmail.com">geoinformatica.brasil@gmail.com</a></p> -->
+
+        <h3>Organização</h3>
+        <div class="org-logos">
+            <!-- <a href="https://www.registro.unesp.br//">
+                <img src="../assets/circle-unesp-registro.png" alt="UDESC">
+            </a> -->
+
+            <a href="https://www.ifpa.edu.br/">
+                <img src="../assets/ifpa.png" alt="IFPA">
+            </a>
+
+            <a href="https://www.gov.br/inpe/pt-br">
+                <img src="../assets/circle-inpe.png" alt="INPE">
+            </a>
+        </div>
+
+        <h3>Apoio</h3>
+        <div class="org-logos">
+
+            <a href="https://selperbrasil.org.br/">
+                <img src="../assets/circle-selper.png" alt="SELPER - Capítulo Brasil">
+            </a>
+
+            <!-- <a href="https://clickgeo.com.br/">
+                <img src="../assets/circle-ClickGeo.png" alt="CLICKGEO">
+            </a> -->
+
+            <a href="https://2025.sbsr.com.br/sbsr-2025/page/4706-inicio">
+                <img src="../assets/circle-sbsr.png" alt="SBSR">
+            </a>
+
+            <a href="https://data.inpe.br/bdc/web/">
+                <img src="../assets/circle-bdc.png" alt="Brazil Data Cube Project">
+            </a>
+
+            <a href="https://meninasdageo.com.br/">
+                <img src="../assets/logo_meninaspeq.png" alt="Meninas da Geo">
+            </a>
+        </div>
+
+        <h3>Parceiros de Publicação</h3>
+        <div class="publishing-logos">
+
+            <a href="https://seer.ufu.br/index.php/revistabrasileiracartografia"
+            target="_blank"
+            rel="noopener noreferrer">
+                <img src="../assets/publishing_partners/rbc_cover.png" alt="Revista Brasileira de Cartografia">
+            </a>
+
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 GEOINFO - Simpósio Brasileiro de Geoinformática
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            var x = document.getElementById("navLinks");
+            x.classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>

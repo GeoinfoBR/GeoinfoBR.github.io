@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEOINFO 2026 - Submissão</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <style>
+        h3 { color: #0056b3; margin: 20px 0 10px; }
+        .box { background-color: #f9f9f9; padding: 20px; border-left: 4px solid #0056b3; margin: 20px 0; }
+        /* --- PUBLISHING PARTNERS --- */
+        .publishing-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .publishing-logos img {
+            width: 140px;
+            height: 100px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .publishing-logos img:hover {
+            transform: scale(1.05);
+        }
+        /* --- SUBMISSION ALERT --- */
+        .submission-alert {
+            background: linear-gradient(135deg, #dfe4f7 0%, #c7d6ef 100%);
+            border-radius: 12px;
+            margin: 25px 0;
+            padding: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s ease;
+        }
+
+        .submission-alert:hover {
+            transform: translateY(-2px);
+        }
+
+        .submission-alert-content {
+            padding: 20px 25px;
+            text-align: center;
+        }
+
+        .submission-alert .alert-badge {
+            display: inline-block;
+            background-color: #081558;
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 0.5px;
+            margin-bottom: 10px;
+        }
+
+        .submission-alert h4 {
+            color: #081558;
+            font-size: 22px;
+            margin: 10px 0;
+            font-weight: 700;
+        }
+
+        .submission-alert .dates {
+            color: #081558;
+            font-size: 16px;
+            margin-bottom: 18px;
+        }
+
+        .submission-btn {
+            display: inline-block;
+            background-color: #081558;
+            color: #fff;
+            padding: 12px 30px;
+            border-radius: 40px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .submission-btn:hover {
+            background-color: #24208a;
+            color: #fff;
+            transform: scale(1.03);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="../logo.png" alt="GEOINFO Logo"></a></div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Início</a>
+                <a href="call_for_papers.html">Chamada de Trabalhos</a>
+                <a href="submission.html" class="active">Submissão</a>
+                <a href="registration.html">Inscrição</a>
+                <a href="program.html">Programação</a>
+                <a href="venue.html">Local</a>
+                <a href="organization.html">Organização</a>
+                <a href="committee.html">Comitê</a>
+                <a href="collection.html">Acervo</a>
+            </nav>
+            <a href="../submission.html" class="lang-switch" hreflang="en" title="View in English">EN</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Diretrizes para Preparação de Artigos</h2>
+        <p>Os artigos devem descrever pesquisas originais. Trabalhos em andamento ou recém-concluídos são bem-vindos. Todas as submissões serão avaliadas por vários membros de um comitê científico altamente qualificado.</p>
+
+        <div class="box">
+            <h3>Categorias de Submissão</h3>
+            <ul>
+                <li><strong>Artigos curtos:</strong> Contribuições que descrevem pesquisas originais em andamento, com até 6 páginas, em inglês (preferencialmente) ou português.</li>
+                <li><strong>Artigos completos:</strong> Contribuições que descrevem pesquisas originais recém-concluídas, com até 12 páginas, em inglês.</li>
+                <li><strong>Bases e conjuntos de dados:</strong> Contribuições que descrevem um conjunto de dados geoespaciais organizado pelos autores, com até 6 páginas.</li>
+                <li><strong>Ferramentas:</strong> Contribuições que descrevem ferramentas e aplicações originais, com até 6 páginas.</li>
+            </ul>
+        </div>
+
+        <p>As contribuições devem ser submetidas em formato PDF, de acordo com as diretrizes da <strong>SBC</strong>. Modelos e instruções para preparação de manuscritos em OpenOffice, MS-Word ou LaTeX estão disponíveis em: <a href="https://www.sbc.org.br/documentos-da-sbc/summary/169-templates-para-artigos-e-capitulos-de-livros/878-modelosparapublicaodeartigos" target="_blank">Modelos disponíveis aqui</a>.</p>
+
+        <!-- SUBMISSION ALERT - INSCRIÇÕES ABERTAS -->
+        <div class="submission-alert">
+            <div class="submission-alert-content">
+                <span class="alert-badge">📄 SUBMISSÃO DE ARTIGOS ABERTA 📄</span>
+                <h4>Submeta seu artigo ao GEOINFO 2026!</h4>
+                <div class="dates">
+                    📝 O sistema de submissão está aberto. Envie seu manuscrito até <strong>18 de outubro de 2026</strong>.
+                </div>
+                <a href="https://cmt3.research.microsoft.com/GEOINFO2026/Submission/Index"
+                class="submission-btn"
+                target="_blank"
+                rel="noopener noreferrer">
+                    SUBMETER AGORA
+                </a>
+            </div>
+        </div>
+
+        <h2>Instruções de Submissão</h2>
+        <p>O serviço Microsoft CMT foi utilizado para gerenciar o processo de revisão por pares desta conferência. Esse serviço foi oferecido gratuitamente pela Microsoft, que arcou com todas as despesas, incluindo os custos dos serviços de nuvem Azure e do desenvolvimento e suporte do software.</p>
+        
+        <h3>Instruções para uso do CMT</h3>
+        <ol>
+            <li>Acesse o link do sistema CMT.</li>
+            <li>Se você nunca utilizou o CMT, crie uma conta.</li>
+            <li>Entre na sua conta.</li>
+            <li>Selecione o papel "Author" e a conferência "GEOINFO2026".</li>
+            <li>Clique em "+ Create new submission" no "Author Console".</li>
+        </ol>
+
+
+        <h2>Artigos Selecionados</h2>
+
+        <p>Os autores da contribuição premiada serão convidados a submeter uma versão estendida de seu trabalho à
+            <a href="https://seer.ufu.br/index.php/revistabrasileiracartografia" target="_blank" rel="noopener noreferrer">RBC</a>.
+    
+    O manuscrito convidado passará pelo processo editorial e de revisão por pares padrão do periódico.
+    Autores cujos artigos forem recomendados poderão ter condições especiais na taxa de processamento de artigo (APC).
+</p>
+
+        <h3>Parceiros de Publicação</h3>
+        <div class="publishing-logos">
+
+            <a href="https://seer.ufu.br/index.php/revistabrasileiracartografia"
+            target="_blank"
+            rel="noopener noreferrer">
+                <img src="../assets/publishing_partners/rbc_cover.png" alt="Revista Brasileira de Cartografia">
+            </a>
+
+        </div>
+    </div>
+
+    <footer>&copy; 2026 GEOINFO</footer>
+    <script>function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }</script>
+</body>
+</html>
