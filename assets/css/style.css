@@ -111,3 +111,36 @@ footer {
         display: flex;
     }
 }
+
+/* --- LANGUAGE SWITCH --- */
+.nav-links {
+    margin-left: auto;
+}
+
+.lang-switch {
+    margin-left: 15px;
+    color: #003366;
+    border: 2px solid #003366;
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.3s, color 0.3s;
+}
+
+.lang-switch:hover {
+    background-color: #003366;
+    color: #ffffff;
+}
+
+@media (max-width: 900px) {
+    .lang-switch {
+        margin-left: auto;
+        margin-right: 15px;
+    }
+
+    .hamburger {
+        order: 1;
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GEOINFO 2026 - Organização</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <style>
+        .card {
+            background: #f0f8ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .people-logos img {
+            width: 160px;
+            height: 160px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"><a href="index.html"><img src="../logo.png" alt="GEOINFO Logo"></a></div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+            <nav class="nav-links" id="navLinks">
+                <a href="index.html">Início</a>
+                <a href="call_for_papers.html">Chamada de Trabalhos</a>
+                <a href="submission.html">Submissão</a>
+                <a href="registration.html">Inscrição</a>
+                <a href="program.html">Programação</a>
+                <a href="venue.html">Local</a>
+                <a href="organization.html" class="active">Organização</a>
+                <a href="committee.html">Comitê</a>
+                <a href="collection.html">Acervo</a>
+            </nav>
+            <a href="../organization.html" class="lang-switch" hreflang="en" title="View in English">EN</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Organização</h2>
+
+        <div class="card">
+            <h3>Coordenação de Programa</h3>
+            <div class="people-logos">
+                <a href="http://lattes.cnpq.br/0260327521376255">
+                    <img src="../assets/people/circle-bendini_hugo.png" alt="Hugo Bendini">
+                </a>
+            </div>
+            <p><strong>Hugo Bendini</strong><br>
+                Universidade Estadual Paulista, UNESP - Registro</p>
+        </div>
+
+        <div class="card">
+            <h3>Coordenação de Comunidade</h3>
+            <div class="people-logos">
+                <a href="http://lattes.cnpq.br/8346985753324274">
+                    <img src="../assets/people/circle-para_tatiana.png" alt="Tatiana Pará">
+                </a>
+            </div>
+            <p><strong>Tatiana Pará</strong><br>
+                Instituto Federal do Pará, IFPA</p>
+        </div>
+
+        <div class="card">
+            <h3>Coordenação Geral</h3>
+            <div class="people-logos">
+                <a href="http://lattes.cnpq.br/1967339602343455">
+                    <img src="../assets/people/circle-marujo_rennan.png" alt="Rennan Marujo">
+                </a>
+            </div>
+            <p><strong>Rennan F. B. Marujo</strong><br>
+                Instituto Nacional de Pesquisas Espaciais, INPE</p>
+        </div>
+    </div>
+
+    <footer>&copy; 2026 GEOINFO</footer>
+    <script>function toggleMenu() { document.getElementById("navLinks").classList.toggle("active"); }</script>
+</body>
+
+</html>
